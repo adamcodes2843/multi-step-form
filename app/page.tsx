@@ -1,91 +1,62 @@
-import Image from 'next/image'
+'use client'
+
+import {useState, useEffect} from 'react'
 import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import Footer from './components/Footer'
+import Nav from './components/Nav'
+import Content1 from './components/Content1'
+import Content2 from './components/Content2'
+import Content3 from './components/Content3'
+import Content4 from './components/Content4'
+import ThankYou from './components/ThankYou'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [formContent, setFormContent] = useState(1)
+  const [isChecked, setIsChecked] = useState(false)
+  const [missingData, setMissingData] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    plan: "Arcade",
+    bill: "Monthly",
+    onlineServices: false,
+    largerStorage: false,
+    customizableProfile: false,
+    total: 9
+  })
+
+  useEffect(() => {
+    if (isChecked) {
+      setFormData({...formData, bill: "Yearly"})
+    } 
+    else if (isChecked === false) {
+      setFormData({...formData, bill: "Monthly"})
+    }
+  }, [isChecked])
+
+  console.log(formData)
+  console.log(missingData)
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <main>
+      <Nav formContent={formContent} />
+      <form className="flex justify-center">
+        {
+          formContent === 1 ? <Content1 formData={formData} setFormData={setFormData} missingData={missingData} /> :
+          formContent === 2 ? <Content2 formData={formData} setFormData={setFormData} 
+            isChecked={isChecked} setIsChecked={setIsChecked} /> :
+          formContent === 3 ? <Content3 formData={formData} setFormData={setFormData} 
+            isChecked={isChecked} /> :
+          formContent === 4 ? <Content4 formData={formData} setFormContent={setFormContent} isChecked={isChecked} /> : <ThankYou />
+        }
+    
+      </form>
+      {
+        formContent !== 5 ? <Footer setFormContent={setFormContent} formContent={formContent} formData={formData} setFormData={setFormData} isChecked={isChecked} setMissingData={setMissingData} /> : ""
+      }
+    </main> 
   )
 }
