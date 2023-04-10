@@ -1,4 +1,10 @@
-const Checkbox3 = ({isChecked, formData, setFormData}) => {
+type Checkbox3Props = {
+    formData: any,
+    setFormData: any,
+    isChecked: boolean
+  }
+
+const Checkbox3 = ({isChecked, formData, setFormData}: Checkbox3Props) => {
 
     const customizableProfileOnOff = () => {
         if (formData.customizableProfile === false) {
@@ -21,8 +27,8 @@ const Checkbox3 = ({isChecked, formData, setFormData}) => {
                 onChange={customizableProfileOnOff}
                 />
                 <label htmlFor="customizable-profile-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg">Customizable profile</h3>
-                    <p className="font-bold opacity-50">Custom them on your profile</p>
+                    <h3 className="font-bold text-lg xl:text-2xl">Customizable profile</h3>
+                    <p className="font-bold opacity-50 ">Custom them on your profile</p>
                 </label>
                 <div>
                     <p className="font-semibold text-indigo-600">
@@ -40,7 +46,7 @@ const Checkbox3 = ({isChecked, formData, setFormData}) => {
                 onChange={customizableProfileOnOff}
                 />
                 <label htmlFor="customizable-profile-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg">Customizable profile</h3>
+                    <h3 className="font-bold text-lg xl:text-2xl">Customizable profile</h3>
                     <p className="font-bold opacity-50">Custom them on your profile</p>
                 </label>
                 <div>

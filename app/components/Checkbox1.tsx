@@ -1,4 +1,10 @@
-const Checkbox1 = ({isChecked, formData, setFormData}) => {
+type Checkbox1Props = {
+    formData: any,
+    setFormData: any,
+    isChecked: boolean
+  }
+
+const Checkbox1 = ({isChecked, formData, setFormData}: Checkbox1Props) => {
 
     const onlineServiceOnOff = () => {
         if (formData.onlineServices === false) {
@@ -22,7 +28,7 @@ const Checkbox1 = ({isChecked, formData, setFormData}) => {
                     onChange={onlineServiceOnOff}
                 />
                 <label htmlFor="online-service-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg">Online service</h3>
+                    <h3 className="font-bold text-lg xl:text-2xl">Online service</h3>
                     <p className="font-bold opacity-50">Access to muliplayer games</p>
                 </label>
                 <div>
@@ -41,7 +47,7 @@ const Checkbox1 = ({isChecked, formData, setFormData}) => {
                     onChange={onlineServiceOnOff}
                 />
                 <label htmlFor="online-service-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg">Online service</h3>
+                    <h3 className="font-bold text-lg xl:text-2xl">Online service</h3>
                     <p className="font-bold opacity-50">Access to muliplayer games</p>
                 </label>
                 <div>

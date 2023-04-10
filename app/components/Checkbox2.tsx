@@ -1,4 +1,10 @@
-const Checkbox2 = ({isChecked, formData, setFormData}) => {
+type Checkbox2Props = {
+  formData: any,
+  setFormData: any,
+  isChecked: boolean
+}
+
+const Checkbox2 = ({isChecked, formData, setFormData}: Checkbox2Props) => {
 
     const largerStorageOnOff = () => {
         if (formData.largerStorage === false) {
@@ -21,7 +27,7 @@ const Checkbox2 = ({isChecked, formData, setFormData}) => {
             onChange={largerStorageOnOff}
             />
             <label htmlFor="larger-storage-option" className="text-left mr-8 cursor-pointer px-2">
-                <h3 className="font-bold text-lg">Larger storage</h3>
+                <h3 className="font-bold text-lg xl:text-2xl">Larger storage</h3>
                 <p className="font-bold opacity-50">Extra 1TB of cloud save</p>
             </label>
               <div>
@@ -40,7 +46,7 @@ const Checkbox2 = ({isChecked, formData, setFormData}) => {
             onChange={largerStorageOnOff}
             />
             <label htmlFor="larger-storage-option" className="text-left mr-8 cursor-pointer px-2">
-                <h3 className="font-bold text-lg">Larger storage</h3>
+                <h3 className="font-bold text-lg xl:text-2xl">Larger storage</h3>
                 <p className="font-bold opacity-50">Extra 1TB of cloud save</p>
             </label>
               <div>

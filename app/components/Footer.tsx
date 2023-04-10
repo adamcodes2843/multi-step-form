@@ -1,4 +1,16 @@
-const Footer = ({setFormContent, formContent, formData, setFormData, isChecked, setMissingData}) => {
+type FooterProps = {
+  formData: any,
+  setFormData: any,
+  setFormContent: any,
+  setMissingData: any,
+  formContent: number,
+  isChecked: boolean
+}
+
+const Footer = ({setFormContent, formContent, formData, setFormData, isChecked, setMissingData}: FooterProps) => {
+
+  let validEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)
+  let validPhoneNumber = /^(1\s?)?(\d{3}|\(\d{3}\))[\s\-]?\d{3}[\s\-]?\d{4}$/gm.test(formData.phoneNumber)
 
   let finalCost = 0
 
@@ -28,7 +40,7 @@ const Footer = ({setFormContent, formContent, formData, setFormData, isChecked, 
   }
 
   const requiredAlert = () => {
-    if (formData.name === "" || formData.email === "" || formData.phoneNumber === "") {
+    if (formData.name === "" || formData.email === "" || formData.phoneNumber === "" || validEmail === false || validPhoneNumber === false) {
       setMissingData(true)
       setFormContent(1)
     } else {
@@ -56,11 +68,11 @@ const Footer = ({setFormContent, formContent, formData, setFormData, isChecked, 
  
 
   return (
-    <footer className="bg-white fixed h-20 w-full bottom-0 flex justify-between items-center p-6">
-        <button className="font-bold opacity-50" disabled={formContent === 1} onClick={previousPage}>
+    <footer className="bg-white fixed md:static h-20 w-full md:w-fill  md:col-span-2 md:row-span-1 bottom-0 flex justify-between items-center p-6 xl:px-24 lg:px-16">
+        <button className="font-bold opacity-50 xl:text-xl hover:opacity-70" disabled={formContent === 1} onClick={previousPage}>
             {formContent !== 1 ? "Go Back" : ""}
         </button>
-        <button className="font-semibold bg-blue-900 hover:bg-blue-700 text-white p-3 rounded" onClick={nextPage} type={formContent !== 4 ? "button" : "submit"}>
+        <button className="font-semibold bg-blue-900 hover:bg-blue-700 text-white p-3 rounded md:rounded-xl xl:text-xl xl:px-6 xl:py-3" onClick={nextPage} type={formContent !== 4 ? "button" : "submit"}>
             {formContent === 4 ? "Confirm" : "Next Step"}
         </button>
     </footer>

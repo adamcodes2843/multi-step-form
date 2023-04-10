@@ -1,4 +1,10 @@
-const Input1 = ({setFormData, formData, missingData }) => {
+type Input1Props = {
+  setFormData: any,
+  formData: any,
+  missingData: boolean
+}
+
+const Input1 = ({ setFormData, formData, missingData }: Input1Props) => {
   return (
     <>
       { missingData === true  && formData.name === "" ?
@@ -7,7 +13,7 @@ const Input1 = ({setFormData, formData, missingData }) => {
           <span>Name</span><span className="text-red-600">This field is required</span>
           </div>
           <input 
-          className="w-full border-2 rounded py-2 px-4 mb-3 border-red-600 focus:outline-none focus:border-indigo-600" 
+          className="xl:mb-6 w-full border-2 rounded py-2 px-4 mb-3 border-red-600 focus:outline-none focus:border-indigo-600 lg:rounded-lg hover:cursor-pointer" 
           type="text" 
           placeholder="e.g. Stephen King" 
           value={formData.name}
@@ -19,9 +25,11 @@ const Input1 = ({setFormData, formData, missingData }) => {
         </label>
         :
         <label>
-          Name
+          <div className="flex flex-row justify-between items-center">
+          <span>Name</span>
+          </div>
           <input 
-          className="w-full border-2 rounded py-2 px-4 mb-3 hover:border-indigo-600 focus:outline-none focus:border-indigo-600" 
+          className="xl:mb-6 w-full border-2 rounded py-2 px-4 mb-3 hover:border-indigo-600 focus:outline-none focus:border-indigo-600 lg:rounded-lg hover:cursor-pointer" 
           type="text" 
           placeholder="e.g. Stephen King" 
           value={formData.name}

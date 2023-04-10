@@ -1,7 +1,6 @@
 'use client'
 
 import {useState, useEffect} from 'react'
-import { Inter } from 'next/font/google'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
 import Content1 from './components/Content1'
@@ -9,14 +8,30 @@ import Content2 from './components/Content2'
 import Content3 from './components/Content3'
 import Content4 from './components/Content4'
 import ThankYou from './components/ThankYou'
+import { Ubuntu } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: '400'
+})
+
+interface UserData {
+  name: string,
+  email: string,
+  phoneNumber: string | number,
+  plan: string,
+  bill: string,
+  onlineServices: boolean,
+  largerStorage: boolean,
+  customizableProfile: boolean,
+  total: number
+}
 
 export default function Home() {
-  const [formContent, setFormContent] = useState(1)
-  const [isChecked, setIsChecked] = useState(false)
-  const [missingData, setMissingData] = useState(false)
-  const [formData, setFormData] = useState({
+  const [formContent, setFormContent] = useState<number>(1)
+  const [isChecked, setIsChecked] = useState<boolean>(false)
+  const [missingData, setMissingData] = useState<boolean>(false)
+  const [formData, setFormData] = useState<UserData>({
     name: "",
     email: "",
     phoneNumber: "",
@@ -28,6 +43,7 @@ export default function Home() {
     total: 9
   })
 
+
   useEffect(() => {
     if (isChecked) {
       setFormData({...formData, bill: "Yearly"})
@@ -37,13 +53,12 @@ export default function Home() {
     }
   }, [isChecked])
 
-  console.log(formData)
-  console.log(missingData)
+  
 
   return (
-    <main>
+    <main className={`${ubuntu.className} md:rounded-xl md:grid md:grid-cols-3 md:w-11/12 md:p-3 md:gap-3 md:bg-white md:pr-6 xl:p-6`}>
       <Nav formContent={formContent} />
-      <form className="flex justify-center">
+      <form className="flex justify-center md:col-span-2 md:row-span-2 lg:row-span-5 xl:p-20 lg:p-12 lg:pt-0 md:pt-0">
         {
           formContent === 1 ? <Content1 formData={formData} setFormData={setFormData} missingData={missingData} /> :
           formContent === 2 ? <Content2 formData={formData} setFormData={setFormData} 

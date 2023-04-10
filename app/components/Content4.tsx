@@ -1,4 +1,10 @@
-const Content4 = ({formData, setFormContent, isChecked}) => {
+type Content4Props = {
+  formData: any,
+  setFormContent: any,
+  isChecked: boolean
+}
+
+const Content4 = ({formData, setFormContent, isChecked}: Content4Props) => {
 
   const goBack = () => {
     setFormContent(2)
@@ -27,14 +33,14 @@ const Content4 = ({formData, setFormContent, isChecked}) => {
   }
 
   return (
-    <div className="content4 bg-white mt-28 fixed w-5/6 rounded-xl px-6 py-8">
-        <h1 className="text-3xl font-bold py-3">Finishing up</h1>
-        <h2 className="text-xl opacity-40 font-bold leading-8">Double-check everything looks OK before confirming.</h2>
+    <div className="content4 bg-white mt-28 fixed  md:mt-0 md:static md:w-full w-5/6 rounded-xl px-6 py-8 md:col-start-2">
+        <h1 className="text-3xl font-bold py-3 xl:text-4xl">Finishing up</h1>
+        <h2 className="text-xl opacity-40 font-bold leading-8 xl:text-2xl">Double-check everything looks OK before confirming.</h2>
         <div className="bg-gray-100 rounded-xl flex flex-col p-6 my-4 font-semibold">
           <div className="flex flex-row items-center justify-between pb-4">
             <div>
               <h3 className="font-bold">{formData.plan} &#40;{formData.bill}&#41;</h3>
-              <button className="opacity-50 w-2 h-4" onClick={goBack}><u>Change</u></button>
+              <button className="opacity-50 w-2 h-4 hover:opacity-100 hover:text-indigo-600" onClick={goBack}><u>Change</u></button>
             </div>
             <h3 className="font-bold">{planCost()}</h3>
           </div>
