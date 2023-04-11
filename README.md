@@ -1,5 +1,7 @@
 # Frontend Mentor - Multi-step form solution
 
+[App Demo](https://multi-step-form-phi-ashen.vercel.app/)
+
 This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
@@ -40,8 +42,8 @@ Checkout screeshots folder
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/adamcodes2843/multi-step-form)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://github.com/adamcodes2843/multi-step-form)
+- Live Site URL: [live site](https://multi-step-form-phi-ashen.vercel.app/)
 
 ## My process
 
