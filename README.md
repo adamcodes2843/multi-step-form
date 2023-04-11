@@ -61,7 +61,7 @@ This was the first time I used typescript in my own project. I'm happy to get ba
 
 ### Continued development
 
-I took the easy way out to stop typescript from being mad at me several times. I also want to work on not repeating code, making everything more dynamic and utilizing best practices in general. I need to get more comfortable customizing tailwind, and more easily use flex box, position properties and grid to fit my project's specific needs. Some of my jsx elements and attributes were wrong. The svg nav bar image only changes from desktop to mobile when the page is rerendered. I want to get faster at everything.
+I took the easy way out to stop typescript from being mad at me several times. I also want to work on not repeating code, making everything more dynamic and utilizing best practices in general. I need to get more comfortable customizing tailwind, and more easily use flex box, position properties and grid to fit my project's specific needs. Some of my jsx elements and attributes were wrong. I want to get faster at everything.
 
 ## Author
 
