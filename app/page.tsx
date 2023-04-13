@@ -56,9 +56,9 @@ export default function Home() {
   
 
   return (
-    <main className={`${ubuntu.className} md:rounded-xl md:grid md:grid-cols-3 md:w-11/12 md:p-3 md:gap-3 md:bg-white md:pr-6 xl:p-6`}>
+    <main className={`${ubuntu.className} md:rounded-xl md:grid md:grid-cols-3 xl:w-[66rem] md:w-11/12 md:p-3 md:gap-3 md:bg-white md:pr-6 xl:p-5`}>
       <Nav formContent={formContent} />
-      <form className="flex justify-center md:col-span-2 md:row-span-2 lg:row-span-5 xl:p-20 lg:p-12 lg:pt-0 md:pt-0">
+      <form className="flex justify-center md:col-span-2 md:row-span-2 lg:row-span-5 xl:pb-12 lg:px-12 md:pt-0">
         {
           formContent === 1 ? <Content1 formData={formData} setFormData={setFormData} missingData={missingData} /> :
           formContent === 2 ? <Content2 formData={formData} setFormData={setFormData} 

@@ -10,7 +10,7 @@ type Content3Props = {
 
 const Content3 = ({isChecked, formData, setFormData}: Content3Props) => {
     return (
-      <div className="Content3 bg-white mt-28 fixed md:mt-0 md:static md:w-full w-5/6 rounded-xl px-6 py-8 md:col-start-2">
+      <div className="Content3 bg-white mt-28 fixed md:mt-0 md:static md:w-full w-11/12 rounded-xl px-6 xl:py-8 md:py-0 md:pt-4 py-8 md:col-start-2">
           <h1 className="text-3xl font-bold py-3 xl:text-4xl">Pick add-ons</h1>
           <h2 className="text-xl opacity-40 font-bold leading-8 xl:text-2xl">Add-ons help enhance your gaming experience.</h2>
           <fieldset className="grid gid-cols-1 grid-rows-3 gap-4 my-6">

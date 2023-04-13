@@ -11,7 +11,7 @@ const Button3 = ({isChecked, proPlan, formData}: Button3Props) => {
   return (
     <>
         { formData.plan === "Pro" ?
-            <button type="button" className="row-start-3 row-end-4 border-2 rounded-lg p-4 flex flex-row md:flex-col md:justify-between gap-4 border-indigo-600 bg-indigo-50 md:w-1/3" onClick={proPlan}>
+            <button type="button" className="row-start-3 row-end-4 border-2 rounded-lg p-4 flex flex-row md:flex-col md:justify-between gap-4 border-indigo-600 bg-indigo-50  md:w-1/3" onClick={proPlan}>
                 <Image src={proIcon} alt="pro icon" width="50" height="50" />
                 <div className="flex flex-col items-start">
                     <h3 className="font-bold text-xl md:pt-12">Pro</h3>

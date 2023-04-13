@@ -68,8 +68,8 @@ const Footer = ({setFormContent, formContent, formData, setFormData, isChecked, 
  
 
   return (
-    <footer className="bg-white fixed md:static h-20 w-full md:w-fill  md:col-span-2 md:row-span-1 bottom-0 flex justify-between items-center p-6 xl:px-24 lg:px-16">
-        <button className="font-bold opacity-50 xl:text-xl hover:opacity-70" disabled={formContent === 1} onClick={previousPage}>
+    <footer className="bg-white fixed md:static h-20 w-full md:w-fill  md:col-span-2 md:row-span-1 bottom-0 flex justify-between items-center p-6 xl:px-20 lg:px-16">
+        <button className="font-bold opacity-50 xl:text-xl hover:opacity-70 xl:ml-2 lg:ml-6 md:ml-4" disabled={formContent === 1} onClick={previousPage}>
             {formContent !== 1 ? "Go Back" : ""}
         </button>
         <button className="font-semibold bg-blue-900 hover:bg-blue-700 text-white p-3 rounded md:rounded-xl xl:text-xl xl:px-6 xl:py-3" onClick={nextPage} type={formContent !== 4 ? "button" : "submit"}>
