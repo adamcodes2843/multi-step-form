@@ -9,7 +9,7 @@ type NavProps = {
 const Nav = ({formContent}: NavProps) => {
 
   return (
-    <nav className="w-full md:w-full h-52 md:h-full top-0 md:top-auto fixed md:relative md:col-start-1 md:col-span-1 md:row-span-3 lg:row-span-6 text-white" >
+    <nav className="w-full md:w-full h-44 md:h-full top-0 md:top-auto fixed md:relative md:col-start-1 md:col-span-1 md:row-span-3 lg:row-span-6 text-white" >
         <Image src={navPhone} alt="" className="md:hidden w-full h-full object-cover absolute mix-blend-overlay" />
         <Image src={navDesktop} alt="" className="hidden md:block w-full h-full object-cover absolute md:mix-blend-normal md:rounded-xl" />
         <ol className="text-xl flex md:flex-col justify-around items-center m-auto w-52 border-black mt-8 md:w-3/4 md:h-1/2 md:relative">

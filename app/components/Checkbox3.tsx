@@ -18,7 +18,7 @@ const Checkbox3 = ({isChecked, formData, setFormData}: Checkbox3Props) => {
   return (
     <> 
         { formData.customizableProfile ?
-            <label className="row-start-3 row-end-4 border-2 flex flex-row justify-around items-center px-2 rounded-lg bg-indigo-50 border-indigo-600 cursor-pointer">
+            <label className="row-start-3 row-end-4 border-2 flex flex-row justify-around items-center px-4 md:px-2 rounded-lg bg-indigo-50 border-indigo-600 cursor-pointer">
                 <input 
                 type="checkbox" 
                 id="customizable-profile-option" 
@@ -26,9 +26,9 @@ const Checkbox3 = ({isChecked, formData, setFormData}: Checkbox3Props) => {
                 checked={formData.customizableProfile} 
                 onChange={customizableProfileOnOff}
                 />
-                <label htmlFor="customizable-profile-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg xl:text-2xl">Customizable profile</h3>
-                    <p className="font-bold opacity-50 ">Custom them on your profile</p>
+                <label htmlFor="customizable-profile-option" className="text-left cursor-pointer px-4">
+                    <h3 className="font-bold md:text-lg xl:text-2xl">Customizable profile</h3>
+                    <p className="font-bold opacity-50 text-sm md:text-base ">Custom them on your profile</p>
                 </label>
                 <div>
                     <p className="font-semibold text-indigo-600">
@@ -37,7 +37,7 @@ const Checkbox3 = ({isChecked, formData, setFormData}: Checkbox3Props) => {
                 </div>
             </label>
         :
-            <label className="row-start-3 row-end-4 border-2 flex flex-row justify-around items-center px-2 rounded-lg hover:border-indigo-600 cursor-pointer">
+            <label className="row-start-3 row-end-4 border-2 flex flex-row justify-around items-center md:px-2 px-4 rounded-lg hover:border-indigo-600 cursor-pointer">
                 <input 
                 type="checkbox" 
                 id="customizable-profile-option" 
@@ -45,9 +45,9 @@ const Checkbox3 = ({isChecked, formData, setFormData}: Checkbox3Props) => {
                 checked={formData.customizableProfile} 
                 onChange={customizableProfileOnOff}
                 />
-                <label htmlFor="customizable-profile-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg xl:text-2xl">Customizable profile</h3>
-                    <p className="font-bold opacity-50">Custom them on your profile</p>
+                <label htmlFor="customizable-profile-option" className="text-left cursor-pointer px-4">
+                    <h3 className="font-bold md:text-lg xl:text-2xl">Customizable profile</h3>
+                    <p className="font-bold opacity-50 text-sm md:text-base">Custom them on your profile</p>
                 </label>
                 <div>
                     <p className="font-semibold text-indigo-600">

@@ -19,7 +19,7 @@ const Checkbox1 = ({isChecked, formData, setFormData}: Checkbox1Props) => {
     <>
         {
             formData.onlineServices ?
-            <label className="row-start-1 row-end-2 border-2 flex flex-row justify-around items-center py-4 px-2 rounded-lg bg-indigo-50 border-indigo-600 cursor-pointer">
+            <label className="row-start-1 row-end-2 border-2 flex flex-row justify-around items-center py-2 px-4 md:px-2 rounded-lg bg-indigo-50 border-indigo-600 cursor-pointer">
                 <input 
                     type="checkbox" 
                     id="online-service-option" 
@@ -27,9 +27,9 @@ const Checkbox1 = ({isChecked, formData, setFormData}: Checkbox1Props) => {
                     checked={formData.onlineServices} 
                     onChange={onlineServiceOnOff}
                 />
-                <label htmlFor="online-service-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg xl:text-2xl">Online service</h3>
-                    <p className="font-bold opacity-50">Access to muliplayer games</p>
+                <label htmlFor="online-service-option" className="text-left cursor-pointer px-4">
+                    <h3 className="font-bold md:text-lg xl:text-2xl">Online service</h3>
+                    <p className="font-bold opacity-50 text-sm md:text-base">Access to muliplayer games</p>
                 </label>
                 <div>
                     <p className="font-semibold text-indigo-600">
@@ -38,7 +38,7 @@ const Checkbox1 = ({isChecked, formData, setFormData}: Checkbox1Props) => {
                 </div>
             </label>
             :
-            <label className="row-start-1 row-end-2 border-2 flex flex-row justify-around items-center py-4 px-2 rounded-lg hover:border-indigo-600 cursor-pointer">
+            <label className="row-start-1 row-end-2 border-2 flex flex-row justify-around items-center py-2 px-4 md:px-2 rounded-lg hover:border-indigo-600 cursor-pointer">
                 <input 
                     type="checkbox" 
                     id="online-service-option" 
@@ -46,9 +46,9 @@ const Checkbox1 = ({isChecked, formData, setFormData}: Checkbox1Props) => {
                     checked={formData.onlineServices} 
                     onChange={onlineServiceOnOff}
                 />
-                <label htmlFor="online-service-option" className="text-left cursor-pointer px-2">
-                    <h3 className="font-bold text-lg xl:text-2xl">Online service</h3>
-                    <p className="font-bold opacity-50">Access to muliplayer games</p>
+                <label htmlFor="online-service-option" className="text-left cursor-pointer px-4">
+                    <h3 className="font-bold md:text-lg xl:text-2xl">Online service</h3>
+                    <p className="font-bold opacity-50 text-sm md:text-base">Access to muliplayer games</p>
                 </label>
                 <div>
                     <p className="font-semibold text-indigo-600">
