@@ -6,7 +6,7 @@ type Input3Props = {
 
 const Input3 = ({setFormData, formData, missingData}: Input3Props) => {
 
-  let validPhoneNumber = /^(1\s?)?(\d{3}|\(\d{3}\))[\s\-]?\d{3}[\s\-]?\d{4}$/gm.test(formData.phoneNumber)
+  let validPhoneNumber = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/gm.test(formData.phoneNumber)
 
   return (
     <>
